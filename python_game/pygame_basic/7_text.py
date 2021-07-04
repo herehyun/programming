@@ -110,7 +110,7 @@ while running:
     elapsed_time = (pygame.time.get_ticks() - start_ticks) / 1000
     # 경과시간(ms)을 1000으로 나누어서 초(s) 단위로 표시
 
-    timer = game_font.render(str(int(total_time - elapsed_time)), True, (0, 255, 0))
+    timer = game_font.render(str(int(total_time - elapsed_time)), True, (255, 255, 255))
     # render(출력할 글자, true ,글자 색상)
     screen.blit(timer, (10, 10))
 
@@ -124,6 +124,9 @@ while running:
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos)) #적 그리기
 
     pygame.display.update() # 게임화면을 다시 그리기!
+
+# 잠시 대기
+pygame.time.delay(2000) # 2초 정도 대기 (ms)
 
 # pygame 종료
 pygame.quit()
